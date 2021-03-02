@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gigle</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Stripped down Google Search based from CSE" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Gigle" />
+        <style>
+            body, .gsc-control-cse {
+
+                }
+             * {
+                font-size: 15px !important;
+                border: 0 !important;
+                }
+            a, a.gs-title, b {
+                color: #006DB5 !important;
+                font-weight: bold !important;
+                }
+            span {
+
+                }
+            div.gsc-input-box {
+                background-color: #FFFFFF !important;
+                border: 2px solid #006DB5 !important;
+                border-radius: 10px 0 0 10px !important;
+                }
+            input.gsc-input {
+                background: none !important;
+                }
+            td.gssb_a, td.gsib_b {
+                display: none !important;
+                }
+            input::placeholder {
+                text-align: center;
+                }
+            .gsc-search-button {
+                 background-color: #006DB5 !important;
+                 border-radius: 0 10px 10px 0 !important;
+                 }
+            .gsc-adBlockInvisible, .gsc-adBlock {
+                display: none !important;
+                }
+            .gs-visibleUrl {
+                border-bottom: 1px solid #D1D1D1 !important;
+                padding-bottom: 10px !important;
+                margin-bottom: 10px !important;
+                }
+            .gsc-url-top, span.gsc-role, span.gsc-org {
+
+                }
+            span.gsc-role, span.gsc-org {
+                display: none !important;
+                }
+            .gsc-table-cell-thumbnail {
+                display: none !important;
+                }
+            .gsc-tabHeader, .gsc-inline-block {
+                color: #80A0B5 !important;
+                background-color: #C6E9FF !important;
+                }
+            .gsc-tabhActive {
+                color: #FFFFFF !important;
+                background-color: #006DB5 !important;
+                }
+            .gsc-results .gsc-webResult, .gs-title {
+                font-weight: 400;
+                }
+            .gs-visibleUrl-short {
+                display: block !important;
+                }
+            .gs-visibleUrl-long {
+                display: none !important;
+                }
+            .gs-visibleUrl-breadcrumb {
+                display: none !important;
+                }
+            .gsc-webResult .gsc-result {
+                border-radius: 8px;
+                margin-bottom: 15px !important;
+                padding: 15px 10px 20px 10px !important;
+                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+                }
+            .gcsc-find-more-on-google-root, .gcsc-branding {
+                display: none !important;
+                }
+        </style>
+    </head>
+    <body>
+        <div>
+            <script async src="https://cse.google.com/cse.js?cx=016525995666847406477:i9oig8yfflg"></script>
+            <div class="gcse-search"></div>
+        </div>
+        <script>
+            window.onload = function() { 
+            document.getElementById("gsc-i-id1").setAttribute("placeholder", "Gigle");
+            document.getElementByClassName("gscb_a").getElementByTagName("span").style.display = "none !important";
+            };
+        </script>
+    </body>
+</html>
