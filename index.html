@@ -17,9 +17,18 @@
                 font-size: 15px !important;
                 border: 0 !important;
                 }
-            a, a.gs-title, b {
+            a, a.gs-title, b, .lagoon {
                 color: #006DB5 !important;
                 font-weight: bold !important;
+                }
+            #logo {
+                font-weight: bold;
+                line-height: 41px;
+                display: inline-block;
+                width: 100%;
+                height: 40px;
+                text-align: center;
+                font-size: 38px !important;
                 }
             .cap_all {
                 text-transform: uppercase;
@@ -119,7 +128,8 @@
     </head>
     <body>
         <div>
-            <img id="logo" src="https://github.com/Revenrof/Gigle/raw/main/flat_detective.png" alt="detective" class="center" width="30%" height="auto" />
+            <!-- <img id="logo" src="https://github.com/Revenrof/Gigle/raw/main/flat_detective.png" alt="detective" class="center" width="30%" height="auto" /> -->
+            <span id="logo">Gigle</span>
             <script async src="https://cse.google.com/cse.js?cx=016525995666847406477:i9oig8yfflg"></script>
             <div class="gcse-search"></div>
         </div>
@@ -129,10 +139,14 @@
                 document.getElementByClassName("gscb_a").getElementByTagName("span").style.display = "none !important";
                 };
             document.getElementById("logo").onclick = function blast() {
-                var isen = document.getElementsByTagName("a");
-                for (var i = 0, il = isen.length; i < il; i++) {
-                   isen[i].setAttribute("data-cturl", " ");
-                   isen[i].classList.add("cap_all");
+                var isen = document.querySelectorAll("[data-cturl]");
+                if (isen.length != 0) {
+                   for (var i = 0, il = isen.length; i < il; i++) {
+                       isen[i].setAttribute("data-cturl", " ");
+                       isen[i].classList.add("cap_all");
+                       document.getElementById("logo").innerHTML = "#Gigle";
+                       document.getElementById("logo").classList.add("lagoon");
+                       };
                    };
                 };
         </script>
